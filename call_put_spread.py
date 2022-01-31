@@ -58,13 +58,13 @@ def get_data():
     print(put_price_list)
     print(call_price_list)
     line = (
-        Line(init_opts=opts.InitOpts(theme=ThemeType.LIGHT, width='1000px', height='300px'))
+        Line(init_opts=opts.InitOpts(theme=ThemeType.LIGHT, width='1000px', height='300px',))
             .add_xaxis(LastTime_list)
             .add_yaxis("call_spread {0}".format(call_price), call_price_list)
             .add_yaxis("put_spread {0}".format(put_price), put_price_list)
             .set_global_opts(title_opts=opts.TitleOpts(title="js_op", subtitle="js_op"),
                              datazoom_opts=opts.DataZoomOpts(is_show=True))
-            .set_series_opts(label_opts=opts.LabelOpts(is_show=True))
+            .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
     )
     line.render('js_op.html')
     line.render_notebook()
