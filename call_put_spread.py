@@ -11,7 +11,7 @@ from pyecharts import options as opts
 from pyecharts.globals import ThemeType
 
 call_price = "J29000"
-put_price = "J23000"
+put_price = "J24000"
 
 
 def remove__(list_content):
